@@ -1,0 +1,18 @@
+           poker_crs  |              bankid  |                                 poker_crs bank ID  |  400   |                  Di  
+           poker_crs  |              sector  |                                     sector number  |    1   |                  Di  
+           poker_crs  |                 xch  |                                        xch number  |    2   |                  Di  
+           poker_crs  |                 ych  |                                        ych number  |    3   |                  Di  
+           poker_crs  |                 zch  |                                        zch number  |    4   |                  Di  
+           poker_crs  |                adcl  |                                              adcl  |    5   |                  Di  
+           poker_crs  |                adcr  |                                              adcr  |    6   |                  Di  
+           poker_crs  |                tdcl  |                                              tdcl  |    7   |                  Di  
+           poker_crs  |                adcb  |                                              adcb  |    8   |                  Di  
+           poker_crs  |                dene  |                                              dene  |    9   |                  Di  
+           poker_crs  |                tdcb  |                                              tdcb  |   10   |                  Di  
+           poker_crs  |                tdcf  |                                              tdcf  |   11   |                  Di  
+           poker_crs  |                hitn  |                                        hit number  |   99   |                  Di  
+          poker_hcal  |              bankid  |                                poker_hcal bank ID  |  500   |                  Di  
+          poker_hcal  |              sector  |                                     sector number  |    1   |                  Di  
+          poker_hcal  |             channel  |                                    channel number  |    3   |                  Di  
+          poker_hcal  |                dene  |                                              dene  |    4   |                  Di  
+          poker_hcal  |                hitn  |                                        hit number  |   99   |                  Di  
