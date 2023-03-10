@@ -126,8 +126,8 @@ sub make_HCAL{
     
     my %detector = init_det();
     my $Nz = 18;                          # Number of crystals in horizontal directions
-    my $Layer_X = 100.;                   # Layer X dimension  in mm
-    my $Layer_Y = 100.;                   # Layer X dimension  in mm
+    my $Layer_X = 200.;                   # Layer X dimension  in mm
+    my $Layer_Y = 200.;                   # Layer X dimension  in mm
     my @LayerFe_Thickness = (20.,20.,20.,20.,20.,20.,20.,20.,20.);          # Fe Thickness in mm. It is referred to the first layer
     my @LayerSc_Thickness = (20.,20.,20.,20.,20.,20.,20.,20.,20.);          # Plastic scintillator Thickness in mm
     my $Wrapping =0;                      # Thickness of the wrapping
