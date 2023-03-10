@@ -128,8 +128,8 @@ sub make_HCAL{
     my $Nz = 18;                          # Number of crystals in horizontal directions
     my $Layer_X = 100.;                   # Layer X dimension  in mm
     my $Layer_Y = 100.;                   # Layer X dimension  in mm
-    my $LayerFe_Thickness = 20.;          # Fe Thickness in mm. It is referred to the first layer
-    my $LayerSc_Thickness = 20.;          # Plastic scintillator Thickness in mm
+    my @LayerFe_Thickness = (20.,20.,20.,20.,20.,20.,20.,20.,20.);          # Fe Thickness in mm. It is referred to the first layer
+    my @LayerSc_Thickness = (20.,20.,20.,20.,20.,20.,20.,20.,20.);          # Plastic scintillator Thickness in mm
     my $Wrapping =0;                      # Thickness of the wrapping
     my $AGap =0.5;                          # Air Gap between Crystals
     
@@ -143,12 +143,24 @@ sub make_HCAL{
     my $dy=0;
     my $dz=0;
     my $iZ=0;
-    
+    my $Layer_Fe =0;
+    my $Layer_Sc =0;
     
     
     for(my $iZ=1; $iZ<=$Nz; $iZ++)
     {
-        $z_C = $centZ + ($iZ)*$LayerFe_Thickness/2 + ($iZ-1)*$LayerSc_Thickness/2;
+        if($iZ%2!=0){
+            $Layer_Fe = $Layer_Fe + $LayerFe_Thickness[0.5*($iZ-1)]/2;
+            if($iZ!=1) {$Layer_Sc = $Layer_Sc + $LayerSc_Thickness[0.5*($iZ-1)-1]/2;
+            }
+        }
+        if($iZ%2==0) {
+            $Layer_Sc = $Layer_Sc + $LayerSc_Thickness[0.5*$iZ-1]/2;
+            $Layer_Fe = $Layer_Fe + $LayerFe_Thickness[0.5*($iZ-2)]/2;
+        
+            }
+
+        $z_C = $centZ + $Layer_Fe + $Layer_Sc;
         $x_C  =0.;
         $y_C = 0;
     
@@ -164,7 +176,7 @@ sub make_HCAL{
         $detector{"pos"}         = "$x_C*mm $y_C*mm $z_C*mm";
         $dx =$Layer_X/2 ;
         $dy =$Layer_Y/2 ;
-        $dz =$LayerFe_Thickness/2 ;
+        $dz =$LayerFe_Thickness[0.5*($iZ-1)]/2 ;
         $detector{"dimensions"}  = "$dx*mm $dy*mm $dz*mm";
         $detector{"material"}    = "G4_Fe";
         print_det(\%configuration, \%detector);
@@ -181,7 +193,7 @@ sub make_HCAL{
         $detector{"pos"}         = "$x_C*mm $y_C*mm $z_C*mm";
         $dx =$Layer_X/2 ;
         $dy =$Layer_Y/2 ;
-        $dz =$LayerSc_Thickness/2 ;
+        $dz =$LayerSc_Thickness[0.5*$iZ-1]/2 ;
         $detector{"dimensions"}  = "$dx*mm $dy*mm $dz*mm";
         $detector{"material"}    = "scintillator";
         $detector{"sensitivity"} = "poker_hcal";
