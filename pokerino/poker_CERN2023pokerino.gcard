@@ -17,4 +17,5 @@ option name="INTEGRATEDRAW" value="poker_crs, poker_hcal"/>
 <option name="MAX_Z_POS"   value="50000." />
 <option name="PRODUCTIONCUT"   value="10" />
 <option name="RECORD_PASSBY" value="1" />
+<option name="SAVE_RANDOM" value="1" />
 </gcard>
