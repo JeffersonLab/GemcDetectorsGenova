@@ -165,7 +165,7 @@ sub make_HCAL{
         $y_C = 0;
     
         
-        if($iZ%2!=0){
+        if($iZ%2!=0 &&$iZ>1){
         $detector{"name"}        = "HCAL_volume"."_"."$iZ";
         $detector{"mother"}      = "main_volume";
         $detector{"description"} = "Layer Fe "."$iZ";
