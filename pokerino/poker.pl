@@ -56,3 +56,9 @@ define_poker_materials();
          make_poker();
    
 }
+if ($configuration{"variation"} eq "CERN2023pokerino_preHCAL")
+{
+ print "variation POKER CERN2023pokerino_preHCAL\n";
+     make_poker();
+
+}

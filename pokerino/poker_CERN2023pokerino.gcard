@@ -3,7 +3,7 @@
 <option name="DATABASE" value="clas12_simulation"/>
 <option name="HIT_PROCESS_LIST" value="poker"/>
 <option name="PHYSICS"   value="STD + HP + FTFP_BERT_HP" />
-<detector name="poker" factory="TEXT" variation="CERN2023pokerino"/>
+<detector name="poker" factory="TEXT" variation="CERN2023pokerino_preHCAL"/>
 <option name="geometry" value="900x600"/>
 option name="INTEGRATEDRAW" value="poker_crs, poker_hcal"/>
 <option name="HALL_MATERIAL"   value="Vacuum" />
