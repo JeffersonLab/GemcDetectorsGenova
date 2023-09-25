@@ -3,13 +3,13 @@
 <option name="DATABASE" value="clas12_simulation"/>
 <option name="HIT_PROCESS_LIST" value="poker"/>
 <option name="PHYSICS"   value="STD + HP + FTFP_BERT_HP" />
-<detector name="poker" factory="TEXT" variation="CERN2023pokerino_preHCAL"/>
+<detector name="poker" factory="TEXT" variation="CERN2023pokerino"/>
 <option name="geometry" value="900x600"/>
-option name="INTEGRATEDRAW" value="poker_crs, poker_hcal"/>
+<option name="INTEGRATEDRAW" value="poker_crs, poker_scint"/>
 <option name="HALL_MATERIAL"   value="Vacuum" />
 <option name="HALL_DIMENSIONS" value="250.*cm,250.*cm,250.*cm" />
-<option name="BEAM_P"   value="pi-, 10*GeV, 0*deg, -90*deg"/>
-<option name="BEAM_V" value="(0.,0.,-30.)cm"/>
+<option name="BEAM_P"   value="e-, 50*GeV, 0*deg, 0*deg"/>
+<option name="BEAM_V" value="(0.,0.,-200.)cm"/>
 <option name="SPREAD_V" value="(0.,0.)cm"/>
 <option name="OUTPUT" value="evio, out.evio"/>
 <option name="MAX_X_POS"   value="20000." />
@@ -17,5 +17,5 @@ option name="INTEGRATEDRAW" value="poker_crs, poker_hcal"/>
 <option name="MAX_Z_POS"   value="50000." />
 <option name="PRODUCTIONCUT"   value="10" />
 <option name="RECORD_PASSBY" value="1" />
-<option name="SAVE_RANDOM" value="1" />
+
 </gcard>

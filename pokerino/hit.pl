@@ -26,8 +26,8 @@ sub define_hit
     
     
     %hit = init_hit();
-    $hit{"name"}            = "poker_hcal";
-    $hit{"description"}     = "Pokerino hcal";
+    $hit{"name"}            = "poker_scint";
+    $hit{"description"}     = "Pokerino scint";
     $hit{"identifiers"}     = "sector channel";
     $hit{"signalThreshold"} = "200.0*KeV";
     $hit{"timeWindow"}      = "1000*ns";
