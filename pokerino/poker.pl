@@ -50,15 +50,9 @@ require "./materials.pl";
 define_banks();
 define_poker_hits();
 define_poker_materials();
-    if ($configuration{"variation"} eq "CERN2023pokerino")
+if ($configuration{"variation"} eq "CERN2023pokerino")
 {
 	 print "variation POKER CERN2023pokerino\n";
          make_poker();
    
-}
-if ($configuration{"variation"} eq "CERN2023pokerino_preHCAL")
-{
- print "variation POKER CERN2023pokerino_preHCAL\n";
-     make_poker();
-
 }
