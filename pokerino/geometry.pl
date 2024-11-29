@@ -336,8 +336,6 @@ sub make_HCAL{
 
 sub make_poker
 {
-    if ($configuration{"variation"} eq "CERN2023pokerino_preHCAL") {make_pre_hcal();}
-    
     make_poker_main_volume();
     make_trigger();
     make_ecal();
