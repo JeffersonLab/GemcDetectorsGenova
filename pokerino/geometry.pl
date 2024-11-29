@@ -172,7 +172,7 @@ sub make_ecal
     my $Nx = 3;                          # Number of crystals in horizontal directions
     my $Ny = 3;                          # Number of crystals in vertical directions
     my $detPWO_Width = 20.;               # Crystal width in mm
-    my $detPWO_Thickness = 250.;          # Crystal lenght in mm
+    my $detPWO_Thickness = 200.;          # Crystal lenght in mm
     my $Wrapping =0;                      # Thickness of the wrapping
     my $AGap =0.5;                          # Air Gap between Crystals
     my $Tot_width  = $detPWO_Width+$Wrapping+$AGap;  # Width of the crystal mother volume, total width of crystal including wrapping and air gap
