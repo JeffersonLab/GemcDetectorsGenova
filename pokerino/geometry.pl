@@ -171,11 +171,11 @@ sub make_ecal
     my %detector = init_det();
     my $Nx = 3;                          # Number of crystals in horizontal directions
     my $Ny = 3;                          # Number of crystals in vertical directions
-    my $detPWO_Width = 20.;               # Crystal width in mm
-    my $detPWO_Thickness = 200.;          # Crystal lenght in mm
-    my $Wrapping =0;                      # Thickness of the wrapping
-    my $AGap =0.5;                          # Air Gap between Crystals
-    my $Tot_width  = $detPWO_Width+$Wrapping+$AGap;  # Width of the crystal mother volume, total width of crystal including wrapping and air gap
+    my $detPWO_Width = 20.;              # Crystal width in mm
+    my $detPWO_Thickness = 200.;         # Crystal lenght in mm
+    my $Wrapping =0;                     # Thickness of the wrapping
+    my $AGap =0.5;                       # Air Gap between Crystals
+    my $Tot_width  = $detPWO_Width+$Wrapping+$AGap;   # Width of the crystal mother volume, total width of crystal including wrapping and air gap
     my $Tot_thickness =$detPWO_Thickness + $Wrapping; # Thickness of the crystal mother volume, total lenght of crystal including wrapping
  
     my $centX = ($Nx/2 )+0.5;
@@ -244,6 +244,29 @@ sub make_ecal
         
     }
     }
+    
+    my $Al_Width = 2.; #Al width in mm
+    
+    $detector{"name"}        = "Aluminum Tile";
+    $detector{"mother"}      = "main_volume";
+    $detector{"description"} = "Aluminum Tile";
+    $detector{"color"}       = "f00a28";
+    $detector{"style"}       = 0;
+    $detector{"visible"}     = 1;
+    $detector{"type"}        = "Box";
+    $x_C=0;
+    $y_C=0;
+    $z_C=-($detPWO_Thickness/2 +  $Al_Width/2) ;
+    $detector{"pos"}         = "$x_C*mm $y_C*mm $z_C*mm";
+    $detector{"rotation"}    = "0*deg 0*deg 0*deg";
+    $dx =$Tot_width*$Nx/2 ;
+    $dy =$Tot_width*$Ny/2 ;
+    $dz =$Al_Width/2 ;
+    $detector{"dimensions"}  = "$dx*mm $dy*mm $dz*mm";
+    $detector{"material"}    = "G4_Al";
+    $detector{"sensitivity"} = "no";
+    print_det(\%configuration, \%detector);
+    
 }
 
 sub make_HCAL{
