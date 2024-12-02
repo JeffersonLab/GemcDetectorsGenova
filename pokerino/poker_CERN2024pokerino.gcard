@@ -9,8 +9,9 @@
 <option name="HALL_MATERIAL"   value="Vacuum" />
 <option name="HALL_DIMENSIONS" value="250.*cm,250.*cm,250.*cm" />
 
+<!-- <option name="BEAM_P"   value="proton, 120*GeV, 0*deg, 0*deg, "/> -->
 <!-- <option name="BEAM_P"   value="mu+, 160*GeV, 0*deg, 0*deg, "/> -->
-<option name="BEAM_P"   value="e+,   10*GeV, 0*deg, 0*deg, "/> 
+<option name="BEAM_P"   value="e-,   10*GeV, 0*deg, 0*deg, "/> 
 
 <option name="BEAM_V" value="(0.,0.,-200.)cm"/>
 <!-- <option name="BEAM_V" value="(2.,0.,-200.)cm"/>  -->	
